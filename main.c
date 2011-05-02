@@ -1,6 +1,6 @@
 /* main.c - Hashtable test
- * Copyright (C) 2007 Christopher Wellons 
  */
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
