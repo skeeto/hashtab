@@ -29,9 +29,9 @@ int main ()
   /* stick the data in the table */
   ht_insert (test_ht, ak, strlen (ak) + 1, av, strlen (av) + 1);
   ht_insert (test_ht, bk, strlen (bk) + 1, bv, strlen (bv) + 1);
-  ht_insert (test_ht, ck, strlen (ak) + 1, cv, strlen (cv) + 1);
-  ht_insert (test_ht, dk, strlen (ak) + 1, dv, strlen (dv) + 1);
-  ht_insert (test_ht, ek, strlen (ak) + 1, ev, strlen (ev) + 1);
+  ht_insert (test_ht, ck, strlen (ck) + 1, cv, strlen (cv) + 1);
+  ht_insert (test_ht, dk, strlen (dk) + 1, dv, strlen (dv) + 1);
+  ht_insert (test_ht, ek, strlen (ek) + 1, ev, strlen (ev) + 1);
 
   /* display table data */
   hashtab_iter_t ii;
