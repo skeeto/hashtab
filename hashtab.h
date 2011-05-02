@@ -1,9 +1,8 @@
 /* hashtab.h - Simple, Reliable C Hashtable
  */
 
-/* I needed a hashtable for a project and wanted to code my own. This
- * hashtable compromises speed for reliability, specifically with
- * growing the hashtable.
+/* Only copies of keys and values are stored in the table, not the
+ * orignals.
  *
  * The hashtable does not grow automatically, but when the hashtable
  * grow function is called. Growing the hashtable is a safe operation:
