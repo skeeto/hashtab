@@ -5,33 +5,18 @@
 #include <stdio.h>
 #include <string.h>
 #include "hashtab.h"
+#include "strht.h"
 
 int main()
 {
     hashtab_t *test_ht = ht_init(2, NULL);
 
-    /* create some data */
-    char *ak = "Perl";
-    char *av = "Language";
-
-    char *bk = "GNU";
-    char *bv = "System";
-
-    char *ck = "Java";
-    char *cv = "Mistake";
-
-    char *dk = "Pidgin";
-    char *dv = "Instant Message";
-
-    char *ek = "Iceweasel";
-    char *ev = "Browser";
-
-    /* stick the data in the table */
-    ht_insert(test_ht, ak, strlen(ak) + 1, av, strlen(av) + 1);
-    ht_insert(test_ht, bk, strlen(bk) + 1, bv, strlen(bv) + 1);
-    ht_insert(test_ht, ck, strlen(ck) + 1, cv, strlen(cv) + 1);
-    ht_insert(test_ht, dk, strlen(dk) + 1, dv, strlen(dv) + 1);
-    ht_insert(test_ht, ek, strlen(ek) + 1, ev, strlen(ev) + 1);
+    /* stick some data into the table (using the string front-end) */
+    strht_insert(test_ht, "Perl", "Language");
+    strht_insert(test_ht, "GNU", "System");
+    strht_insert(test_ht, "Java", "Verbose");
+    strht_insert(test_ht, "Pidgin", "Instant Messenger");
+    strht_insert(test_ht, "Firefox", "Web Browser");
 
     /* display table data */
     hashtab_iter_t ii;
